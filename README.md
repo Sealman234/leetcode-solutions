@@ -23,7 +23,7 @@ var majorityElement = function (nums) {
 
   let used = [];
   for (let i = 0; i <= nums.length; i++) {
-    if (!used.find((el) => el === nums[i])) {
+    if (used.findIndex((el) => el === nums[i]) === -1) {
       used.push(nums[i]);
       if (countInArray(nums, nums[i]) > nums.length / 2) return nums[i];
     }
