@@ -1,6 +1,10 @@
 # LeetCode Solutions
 
-## 169. Majority Element (Easy)
+## Table of contents
+
+* [169. Majority Element](#169-majority-element)
+
+## 169. Majority Element
 
 ```javascript
 /**
