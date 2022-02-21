@@ -21,19 +21,12 @@ var majorityElement = function (nums) {
     return count;
   };
 
-  let countResults = [];
+  let used = [];
   for (let i = 0; i <= nums.length; i++) {
-    if (nums.findIndex((element) => element === nums[i])) {
-      countResults.push(countInArray(nums, nums[i]));
+    if (!used.find((el) => el === nums[i])) {
+      used.push(nums[i]);
+      if (countInArray(nums, nums[i]) > nums.length / 2) return nums[i];
     }
   }
-
-  const maxCount = Math.max(...countResults);
-  const maxCountIndex = countResults.findIndex(
-    (element) => element === maxCount
-  );
-
-  return nums[maxCountIndex];
 };
-
 ```
