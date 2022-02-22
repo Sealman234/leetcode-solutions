@@ -107,3 +107,19 @@ var containsDuplicate = function (nums) {
   return isDuplicated;
 };
 ```
+
+## 268. Missing Number
+
+:memo: 等差數列前 n 項和公式為：Sn=(a1+an)*n/2
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function (nums) {
+  const wrongAmount = nums.reduce((a, b) => a + b);
+  const correctAmount = ((1 + nums.length) * nums.length) / 2;
+  return correctAmount - wrongAmount;
+};
+```
