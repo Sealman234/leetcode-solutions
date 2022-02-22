@@ -6,6 +6,7 @@
 * [136. Single Number](#136-single-number)
 * [283. Move Zeroes](#283-move-zeroes)
 * [217. Contains Duplicate](#217-contains-duplicate)
+* [268. Missing Number](#268-missing-number)
 
 ## 169. Majority Element
 
