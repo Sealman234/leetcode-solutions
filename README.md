@@ -7,6 +7,8 @@
 
 ## 169. Majority Element
 
+:memo: Nested functions, [Array.prototype.findIndex()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+
 ```javascript
 /**
  * @param {number[]} nums
@@ -34,6 +36,8 @@ var majorityElement = function (nums) {
 
 ## 136. Single Number
 
+:memo: [Array.prototype.sort()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
 ```javascript
 /**
  * @param {number[]} nums
@@ -48,7 +52,7 @@ var singleNumber = function (nums) {
     return count;
   };
 
-  const sortedNums = nums.sort();
+  const sortedNums = nums.sort((a, b) => a - b);
   let lastNum = null;
   for (let i = 0; i < sortedNums.length; i++) {
     if (lastNum !== sortedNums[i]) {
