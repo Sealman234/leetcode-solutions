@@ -7,7 +7,7 @@
 
 ## 169. Majority Element
 
-:memo: Nested functions, [Array.prototype.findIndex()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex){:target="_blank" rel="noopener"}
+:memo: Nested functions, [Array.prototype.findIndex()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 
 ```javascript
 /**
