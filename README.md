@@ -4,6 +4,7 @@
 
 * [169. Majority Element](#169-majority-element)
 * [136. Single Number](#136-single-number)
+* [283. Move Zeroes](#283-move-zeroes)
 
 ## 169. Majority Element
 
@@ -60,6 +61,25 @@ var singleNumber = function (nums) {
       if (countInArray(sortedNums, sortedNums[i]) % 2 > 0) {
         return sortedNums[i];
       }
+    }
+  }
+};
+```
+
+## 283. Move Zeroes
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function (nums) {
+  let pointer = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      nums[pointer] = nums[i];
+      nums[i] = i === pointer ? nums[i] : 0;
+      pointer++;
     }
   }
 };
