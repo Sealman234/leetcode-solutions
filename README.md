@@ -5,6 +5,7 @@
 * [169. Majority Element](#169-majority-element)
 * [136. Single Number](#136-single-number)
 * [283. Move Zeroes](#283-move-zeroes)
+* [217. Contains Duplicate](#217-contains-duplicate)
 
 ## 169. Majority Element
 
@@ -84,5 +85,25 @@ var moveZeroes = function (nums) {
       pointer++;
     }
   }
+};
+```
+
+## 217. Contains Duplicate
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function (nums) {
+  let isDuplicated = false;
+  const sortedNums = nums.sort((a, b) => a - b);
+  for (let i = 0; i < sortedNums.length; i++) {
+    if (sortedNums[i] === sortedNums[i + 1]) {
+      isDuplicated = true;
+      return isDuplicated;
+    }
+  }
+  return isDuplicated;
 };
 ```
