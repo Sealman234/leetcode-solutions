@@ -68,6 +68,8 @@ var singleNumber = function (nums) {
 
 ## 283. Move Zeroes
 
+:memo: Two pointer
+
 ```javascript
 /**
  * @param {number[]} nums
