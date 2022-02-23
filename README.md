@@ -7,6 +7,7 @@
 * [283. Move Zeroes](#283-move-zeroes)
 * [217. Contains Duplicate](#217-contains-duplicate)
 * [268. Missing Number](#268-missing-number)
+* [350. Intersection of Two Arrays II](#350-intersection-of-two-arrays-ii)
 
 ## 169. Majority Element
 
@@ -122,5 +123,27 @@ var missingNumber = function (nums) {
   const wrongAmount = nums.reduce((a, b) => a + b);
   const correctAmount = ((1 + nums.length) * nums.length) / 2;
   return correctAmount - wrongAmount;
+};
+```
+
+## 350. Intersection of Two Arrays II
+
+```javascript
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersect = function (nums1, nums2) {
+  let result = [];
+  for (let i = 0; i < nums2.length; i++) {
+    if (nums1.includes(nums2[i])) {
+      result.push(nums2[i]);
+      // 移除找過的數字
+      const pushedIndex = nums1.findIndex((el) => el === nums2[i]);
+      nums1.splice(pushedIndex, 1);
+    }
+  }
+  return result;
 };
 ```
