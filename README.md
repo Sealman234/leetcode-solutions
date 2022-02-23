@@ -8,6 +8,7 @@
 * [217. Contains Duplicate](#217-contains-duplicate)
 * [268. Missing Number](#268-missing-number)
 * [350. Intersection of Two Arrays II](#350-intersection-of-two-arrays-ii)
+* [121. Best Time to Buy and Sell Stock](#121-best-time-to-buy-and-sell-stock)
 
 ## 169. Majority Element
 
@@ -145,5 +146,26 @@ var intersect = function (nums1, nums2) {
     }
   }
   return result;
+};
+```
+
+## 121. Best Time to Buy and Sell Stock
+
+```javascript
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function (prices) {
+  let maxProfit = 0;
+  let min = prices[0];
+  // 除了第一個數字已預設為最小值，遍歷剩下的數字
+  for (let i = 1; i < prices.length; i++) {
+    // 當下數字 vs. 目前的最小值 => 取得最新的最小值
+    min = Math.min(prices[i], min);
+    // (當下數字 - 最新的最小值) vs. 目前的最大獲利 => 得到最新的最大獲利
+    maxProfit = Math.max(maxProfit, prices[i] - min);
+  }
+  return maxProfit;
 };
 ```
